@@ -14,13 +14,15 @@
         content="Something exceptional is on the horizon. Our new platform is being crafted to redefine what's possible.">
     <meta property="og:type" content="website">
 
-    <!-- Favicon (placeholder - will use logo-icon when available) -->
-    <link rel="icon" type="image/svg+xml" href="assets/logo-text.svg">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
 
-    <!-- Google Fonts - Inter -->
+    <!-- Google Fonts - Inter & Saira -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Saira:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
@@ -39,7 +41,8 @@
     <main class="container">
         <!-- Logo -->
         <div class="logo">
-            <img src="assets/logo-text.svg" alt="DLX - Dexio LabX">
+            <img src="assets/icon.svg" alt="DLX" class="logo-icon">
+            <span class="logo-text">Dexio LabX (DLX)</span>
         </div>
 
         <!-- Headline -->
@@ -53,19 +56,36 @@
         <!-- Countdown Timer -->
         <div class="countdown">
             <div class="countdown-item">
-                <span class="countdown-number" id="days">00</span>
+                <div class="countdown-box">
+                    <span class="countdown-number" id="days">00</span>
+                </div>
                 <span class="countdown-label">DAYS</span>
             </div>
+
+            <span class="countdown-separator-bar"></span>
+
             <div class="countdown-item">
-                <span class="countdown-number" id="hours">00</span>
+                <div class="countdown-box">
+                    <span class="countdown-number" id="hours">00</span>
+                </div>
                 <span class="countdown-label">HOURS</span>
             </div>
+
+            <span class="countdown-separator-colon">:</span>
+
             <div class="countdown-item">
-                <span class="countdown-number" id="minutes">00</span>
+                <div class="countdown-box">
+                    <span class="countdown-number" id="minutes">00</span>
+                </div>
                 <span class="countdown-label">MINUTES</span>
             </div>
+
+            <span class="countdown-separator-colon">:</span>
+
             <div class="countdown-item">
-                <span class="countdown-number" id="seconds">00</span>
+                <div class="countdown-box">
+                    <span class="countdown-number" id="seconds">00</span>
+                </div>
                 <span class="countdown-label">SECONDS</span>
             </div>
         </div>
@@ -100,7 +120,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>Copyright © 2025 Dexio LabX Private Limited. All rights reserved.</p>
+        <p>Copyright © 2026 Dexio LabX Private Limited. All rights reserved.</p>
     </footer>
 
     <!-- Countdown Script -->
