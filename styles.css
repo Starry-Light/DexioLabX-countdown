@@ -1,0 +1,331 @@
+/* ===========================
+   CSS Variables & Reset
+   =========================== */
+:root {
+  --bg-dark: #0b0c0e;
+  --text-white: #ffffff;
+  --text-gray: #b9bdc6;
+  --gradient-start: #F4DC7C;
+  --gradient-mid: #F06058;
+  --gradient-end: #4044E8;
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* ===========================
+   Video Background
+   =========================== */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(11, 12, 14, 0.75);
+}
+
+/* Mountain-shaped gradient glow at bottom */
+.video-overlay::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  pointer-events: none;
+  background:
+    /* Blue glow - left side */
+    radial-gradient(ellipse 40% 50% at 20% 100%, rgba(64, 68, 232, 0.4) 0%, transparent 70%),
+    /* Red/Orange glow - center, creates the peak */
+    radial-gradient(ellipse 50% 60% at 50% 100%, rgba(240, 96, 88, 0.35) 0%, transparent 70%),
+    /* Yellow/Orange glow - right side */
+    radial-gradient(ellipse 35% 45% at 75% 100%, rgba(244, 220, 124, 0.3) 0%, transparent 70%);
+  filter: blur(40px);
+}
+
+/* ===========================
+   Main Container
+   =========================== */
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===========================
+   Logo
+   =========================== */
+.logo {
+  margin-bottom: 32px;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+}
+
+/* ===========================
+   Headline (Gradient Text)
+   =========================== */
+.headline {
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  background: linear-gradient(200deg,
+      #F4DC7C 0%,
+      #F06058 30%,
+      #9B4DCA 60%,
+      #4044E8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===========================
+   Subtext
+   =========================== */
+.subtext {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-gray);
+  max-width: 800px;
+  line-height: 1.6;
+  margin-bottom: 48px;
+}
+
+/* ===========================
+   Countdown Timer
+   =========================== */
+.countdown {
+  display: flex;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.countdown-number {
+  font-size: 72px;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--text-white);
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown-label {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--text-gray);
+}
+
+/* ===========================
+   CTA Section
+   =========================== */
+.cta-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.cta-text {
+  font-size: 16px;
+  color: var(--text-gray);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+/* ===========================
+   Buttons
+   =========================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.btn-arrow {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+/* Outlined Button (LinkedIn - White bg, dark text) */
+.btn-outline {
+  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #1a1a1a;
+}
+
+.btn-outline:hover {
+  background: #f0f0f0;
+}
+
+/* Gradient Button (Old Website - Transparent with border) */
+.btn-gradient {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--text-white);
+}
+
+.btn-gradient:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ===========================
+   Footer
+   =========================== */
+.footer {
+  padding: 24px 20px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 1;
+  background: var(--bg-dark);
+}
+
+.footer p {
+  font-size: 14px;
+  color: var(--text-gray);
+}
+
+/* ===========================
+   Responsive Design
+   =========================== */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .video-background {
+    display: none;
+  }
+
+  .headline {
+    font-size: 40px;
+  }
+
+  .countdown {
+    gap: 24px;
+  }
+
+  .countdown-number {
+    font-size: 48px;
+  }
+
+  .countdown-label {
+    font-size: 12px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .btn {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .logo img {
+    height: 48px;
+  }
+
+  .headline {
+    font-size: 32px;
+  }
+
+  .subtext {
+    font-size: 14px;
+    margin-bottom: 32px;
+  }
+
+  .countdown {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .countdown-number {
+    font-size: 40px;
+  }
+
+  .countdown-label {
+    font-size: 11px;
+  }
+}

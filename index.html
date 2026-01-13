@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dexio LabX - Launching Soon</title>
+    <meta name="description"
+        content="Something exceptional is on the horizon. Our new platform is being crafted to redefine what's possible.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Dexio LabX - Launching Soon">
+    <meta property="og:description"
+        content="Something exceptional is on the horizon. Our new platform is being crafted to redefine what's possible.">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon (placeholder - will use logo-icon when available) -->
+    <link rel="icon" type="image/svg+xml" href="assets/logo-text.svg">
+
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Video Background (Desktop Only) -->
+    <div class="video-background">
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="assets/background.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="assets/logo-text.svg" alt="DLX - Dexio LabX">
+        </div>
+
+        <!-- Headline -->
+        <h1 class="headline">We're Launching Soon</h1>
+
+        <!-- Subtext -->
+        <p class="subtext">
+            Something exceptional is on the horizon. Our new platform is being crafted to redefine what's possible.
+        </p>
+
+        <!-- Countdown Timer -->
+        <div class="countdown">
+            <div class="countdown-item">
+                <span class="countdown-number" id="days">00</span>
+                <span class="countdown-label">DAYS</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="hours">00</span>
+                <span class="countdown-label">HOURS</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="minutes">00</span>
+                <span class="countdown-label">MINUTES</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="seconds">00</span>
+                <span class="countdown-label">SECONDS</span>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <p class="cta-text">While you wait, explore our journey and connect with us!</p>
+
+            <div class="cta-buttons">
+                <a href="https://www.linkedin.com/company/dexiolabx/" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-outline">
+                    <img src="assets/linkedin-icon.svg" alt="" class="btn-icon">
+                    <span>LinkedIn</span>
+                    <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+
+                <a href="https://www.dexiodesigns.com" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-gradient">
+                    <img src="assets/globe-icon.svg" alt="" class="btn-icon">
+                    <span>Old Website</span>
+                    <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Copyright © 2025 Dexio LabX Private Limited. All rights reserved.</p>
+    </footer>
+
+    <!-- Countdown Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
