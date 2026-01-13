@@ -313,6 +313,21 @@ body {
     display: none;
   }
 
+  /* Tablet/Mobile gradient: pink/purple glow from bottom (when video hidden) */
+  body::before {
+    content: '';
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    pointer-events: none;
+    z-index: 0;
+    background:
+      radial-gradient(ellipse 200% 80% at 50% 100%, rgba(120, 60, 160, 0.5) 0%, transparent 50%),
+      radial-gradient(ellipse 180% 70% at 50% 100%, rgba(180, 80, 200, 0.35) 0%, transparent 40%);
+  }
+
   .headline {
     font-size: 40px;
   }
@@ -343,12 +358,16 @@ body {
 
 /* Mobile */
 @media (max-width: 480px) {
-  .logo img {
-    height: 48px;
+  .logo-icon {
+    height: 60px;
+  }
+
+  .logo-text {
+    font-size: 14px;
   }
 
   .headline {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .subtext {
@@ -356,17 +375,75 @@ body {
     margin-bottom: 32px;
   }
 
+  /* Mobile gradient: pink/purple glow from bottom */
+  body::before {
+    content: '';
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    pointer-events: none;
+    z-index: 0;
+    background:
+      radial-gradient(ellipse 200% 80% at 50% 100%, rgba(120, 60, 160, 0.6) 0%, transparent 50%),
+      radial-gradient(ellipse 180% 70% at 50% 100%, rgba(180, 80, 200, 0.4) 0%, transparent 40%);
+  }
+
+  /* Countdown: 4 columns, no separators */
   .countdown {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .countdown-separator-bar,
+  .countdown-separator-colon {
+    display: none;
+  }
+
+  .countdown-box {
+    padding: 16px 8px;
+    min-width: unset;
+    width: 100%;
+    border-radius: 8px;
   }
 
   .countdown-number {
-    font-size: 40px;
+    font-size: 32px;
+  }
+
+  .countdown-item {
+    gap: 8px;
   }
 
   .countdown-label {
-    font-size: 11px;
+    font-size: 10px;
+  }
+
+  /* CTA Section */
+  .cta-text {
+    font-size: 14px;
+  }
+
+  .cta-buttons {
+    max-width: 320px;
+  }
+
+  /* Hide button arrows on mobile */
+  .btn-arrow {
+    display: none;
+  }
+
+  .btn {
+    padding: 14px 24px;
+  }
+
+  /* Footer */
+  .footer p {
+    font-size: 12px;
+    line-height: 1.5;
   }
 }
