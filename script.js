@@ -1,11 +1,11 @@
 /**
  * Countdown Timer Script
- * Target: January 18, 2026 at 8:00 AM IST
+ * Target: January 18, 2026 at 4:00 PM IST
  */
 
 (function() {
-  // Target date: January 18, 2026 at 8:00 AM IST (UTC+5:30)
-  const targetDate = new Date('2026-01-18T08:00:00+05:30').getTime();
+  // Target date: January 18, 2026 at 4:00 PM IST (UTC+5:30)
+  const targetDate = new Date('2026-01-18T16:00:00+05:30').getTime();
 
   // DOM elements
   const daysEl = document.getElementById('days');
